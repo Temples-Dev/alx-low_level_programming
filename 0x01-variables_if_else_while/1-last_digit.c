@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main: Entry point
+ * main - Entry point
  *
- * description: to print the last digit of the number stored in the variable n
+ * Description: to print the last digit of the number stored in the variable n
  *
  * Return: Alwaays 0
  */
