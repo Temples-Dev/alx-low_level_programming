@@ -13,10 +13,10 @@ int main(void)
 char alphabet;
 char number;
 for (number = 0; number < 10; number++)
-putchar(number);
+putchar(number + '0');
 
-for (alphabet = a; alphabet <= f; alphabet++)
-puchar(alphabet);
+for (alphabet = 'a'; alphabet <= 'f'; alphabet++)
+putchar(alphabet);
 
 putchar('\n');
 return (0);
