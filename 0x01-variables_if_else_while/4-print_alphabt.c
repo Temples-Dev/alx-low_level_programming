@@ -15,5 +15,6 @@ if ((lower == 'q') && (lower == 'e'))
 continue;
 }
 putchar(lower);
+putchar('\n');
 return (0);
 }
