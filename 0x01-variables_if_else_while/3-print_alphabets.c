@@ -16,6 +16,6 @@ putchar(lower);
 for (upper = 'A'; upper <= 'Z'; lower++)
 putchar(upper);
 
-putchar("\n");
+putchar('\n');
 return (0);
 }
