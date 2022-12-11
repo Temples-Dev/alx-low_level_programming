@@ -11,32 +11,25 @@ int main(void)
 {
 int one;
 int two;
-int three;
-int four;
 
-for (one = 0; one < 10; one++)
+for (one = 0; one < 99; one++)
 {
-for (two = 0; two < 10; two++)
+for (two = one + 1; two <= 99)
 {
-for (three = one; three < 10; three++)
-{
-for(four = two + 1; four < 10; four++)
-{
-putchar(one + '0');
-putchar(two + '0');
+putchar((one / 10) + '0');
+putchar((one % 10) + '0');
 putchar(' ');
-putchar(three + '0');
-putchar(four + '0');
+putchar((two / 10) + '0');
+putchar((two % 10) + '0');
 
-if (!((one == 9 && two == 8) && (three == 9 && four == 9)))
-{
+if (one == 98 && two == 99)
+continue;
+
 putchar(',');
 putchar(' ');
 }
 }
-}
-}
-}
+
 putchar('\n');
 return (0);
-} 
+}
