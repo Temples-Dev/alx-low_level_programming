@@ -17,7 +17,9 @@ char alpha = 'a';
 for (; alpha <= 'z'; alpha++)
 _putchar(alpha);
 
-}
 _putchar('\n');
+
+}
+
 return;
 }
