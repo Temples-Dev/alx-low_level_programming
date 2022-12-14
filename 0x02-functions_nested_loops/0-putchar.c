@@ -9,14 +9,13 @@
 
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
+
+char character[8] = "_putchar";
+int charposition;
+
+for (charposition = 0; charposition <= 8; charposition++)
+_putchar(character[charposition]);
+
 _putchar('\n');
 
 return (0);
