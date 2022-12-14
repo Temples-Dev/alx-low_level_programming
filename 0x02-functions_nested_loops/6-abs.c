@@ -3,12 +3,12 @@
 /**
  * _abs -  function that computes the absolute value of an integer
  *
- * @int: ASCII character
+ * @r: ASCII character
  *
  * Return: int data type
  */
 
-int _abs(int)
+int _abs(int r)
 {
 int r;
 if (r < 0)
