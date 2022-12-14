@@ -14,4 +14,5 @@ if (r >= 0)
 printf("%d", r);
 else
 printf("%i", -r);
+return (0);
 }
