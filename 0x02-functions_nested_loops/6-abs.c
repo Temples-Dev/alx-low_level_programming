@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _abs -  function that computes the absolute value of an integer
  *
@@ -10,15 +10,8 @@
 
 int _abs(int r)
 {
-
-if (r < 0)
-{
-int rr = -r;
-_putchar(rr);
-}
+if (r >= 0)
+printf("%d", r);
 else
-{
-_putchar(r);
-}
-return (0);
+printf("%i", -r);
 }
