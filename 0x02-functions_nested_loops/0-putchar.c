@@ -12,7 +12,7 @@ int main(void)
 char character[8] = "_putchar";
 int charposition;
 
-for (charposition = 0; charposition <= 8; charposition++)
+for (charposition = 0; charposition <= 7; charposition++)
 _putchar(character[charposition]);
 
 _putchar('\n');
