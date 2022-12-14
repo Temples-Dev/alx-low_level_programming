@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 {
 int alphaCount = 0;
 
-while (alphaCount <= 10)
+for (; alphaCount < 10; alphaCount++)
 {
 char alpha = 'a';
 
@@ -18,7 +18,6 @@ for (; alpha <= 'z'; alpha++)
 _putchar(alpha);
 
 _putchar('\n');
-
 }
 
 return;
