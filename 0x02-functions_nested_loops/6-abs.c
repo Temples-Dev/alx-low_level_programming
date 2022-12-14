@@ -13,8 +13,8 @@ int _abs(int r)
 
 if (r < 0)
 {
-  int rr = r * -1;
-_putchar(rr + 48);
+int rr = -r;
+_putchar(rr);
 }
 else
 {
