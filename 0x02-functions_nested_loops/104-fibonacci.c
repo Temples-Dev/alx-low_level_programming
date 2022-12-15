@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints the first 98 Fibonacci numbers
@@ -13,17 +13,18 @@ unsigned long nextdigit = 1;
 unsigned long sum = 0;
 unsigned long number = 0;
 
-while (number < 98)
+while (number < 99)
 {
 sum = start + nextdigit;
-_putchar('0' + sum);
-_putchar(',');
-_putchar(' ');
+printf("%lu", sum);
+putchar(',');
+putchar(' ');
 
 start = nextdigit;
 nextdigit = sum;
 
 number++;
 }
+putchar('\n');
 return (0);
 }
