@@ -8,12 +8,12 @@
 
 int main(void)
 {
-unsigned long long start = 0;
-unsigned long long nextdigit = 1;
-unsigned long long sum = 0;
+unsigned long long int start = 0;
+unsigned long long int nextdigit = 1;
+unsigned long long int sum = 0;
 unsigned long number = 0;
 
-while (number < 98)
+while (number < 101)
 {
 sum = start + nextdigit;
 printf("%llu", sum);
