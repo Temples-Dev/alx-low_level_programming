@@ -8,9 +8,9 @@
 
 int main(void)
 {
-unsigned long start = 0;
-unsigned long nextdigit = 1;
-unsigned long sum = 0;
+unsigned long long start = 0;
+unsigned long long nextdigit = 1;
+unsigned long long sum = 0;
 unsigned long number = 0;
 
 while (number < 98)
