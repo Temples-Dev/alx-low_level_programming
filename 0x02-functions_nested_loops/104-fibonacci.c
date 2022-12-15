@@ -13,7 +13,7 @@ unsigned long nextdigit = 1;
 unsigned long sum = 0;
 unsigned long number = 0;
 
-while (number < 99)
+while (number < 98)
 {
 sum = start + nextdigit;
 printf("%lu", sum);
