@@ -8,22 +8,23 @@
 
 int main(void)
 {
-int start = 0;
-int nextdigit = 1;
-int sum = 0;
+long int start = 0;
+long int nextdigit = 1;
+long int sum = 0;
 int number = 0;
 
 while (number < 49)
 {
 sum = start + nextdigit;
-printf("%d, ", sum);
+printf("%i, ", sum);
 start = nextdigit;
+
 nextdigit = sum;
 
 number++;
 }
 sum = start + nextdigit;
-printf("%d, ", sum);
+printf("%i, ", sum);
 
 return (0);
 }
