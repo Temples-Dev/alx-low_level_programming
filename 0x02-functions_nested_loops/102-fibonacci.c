@@ -19,6 +19,8 @@ sum = start + nextdigit;
 printf("%d, ", sum);
 start = nextdigit;
 nextdigit = sum;
+
+number++;
 }
 sum = start + nextdigit;
 printf("%d, ", sum);
