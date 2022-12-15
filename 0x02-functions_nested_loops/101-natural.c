@@ -13,7 +13,7 @@ int sum;
 
 for (num = 0; num < 1024; num++)
 {
-if ((n % 3 == 0) || (n % 5 == 0))
+if ((num % 3 == 0) || (num % 5 == 0))
 {
 sum = 0;
 sum += num;
