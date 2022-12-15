@@ -13,7 +13,7 @@ int nextdigit = 1;
 int sum = 0;
 int number = 0;
 
-while (number < 50)
+while (number < 49)
 {
 sum = start + nextdigit;
 printf("%d, ", sum);
