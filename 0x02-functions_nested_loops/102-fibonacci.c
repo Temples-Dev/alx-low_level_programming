@@ -16,7 +16,7 @@ int number = 0;
 while (number < 49)
 {
 sum = start + nextdigit;
-printf("%i, ", sum);
+printf("%li, ", sum);
 start = nextdigit;
 
 nextdigit = sum;
@@ -24,7 +24,7 @@ nextdigit = sum;
 number++;
 }
 sum = start + nextdigit;
-printf("%i, ", sum);
+printf("%li, ", sum);
 
 return (0);
 }
