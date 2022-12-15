@@ -19,7 +19,7 @@ sum = start + nextdigit;
 _putchar('0' + sum);
 _putchar(',');
 _putchar(' ');
-       
+
 start = nextdigit;
 nextdigit = sum;
 
