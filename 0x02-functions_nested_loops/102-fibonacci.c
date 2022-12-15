@@ -24,7 +24,7 @@ nextdigit = sum;
 number++;
 }
 sum = start + nextdigit;
-printf("%li, ", sum);
+printf("%li\n", sum);
 
 return (0);
 }
