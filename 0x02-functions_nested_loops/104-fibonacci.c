@@ -16,7 +16,7 @@ unsigned long number = 0;
 while (number < 101)
 {
 sum = start + nextdigit;
-printf("%llu", sum);
+printf("%lu", sum);
 putchar(',');
 putchar(' ');
 
