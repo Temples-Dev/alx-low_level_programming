@@ -9,18 +9,10 @@
 void more_numbers(void)
 {
 int count = 1;
-char num;
 do {
-for (num = 0; num <= 14; num++)
-{
-if (num / 10 > 0)
-_putchar((num / 10) + '0');
+for (int j = 0; j <= 14; j++)
+putchar(j + '0');
 
-_putchar((num % 10) + '0');
-
-}
-_putchar('\n');
+putchar('\n');
 count++;
 } while (count <= 14);
-
-}
