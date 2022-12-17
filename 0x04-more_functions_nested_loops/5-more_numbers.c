@@ -8,12 +8,16 @@
 
 void more_numbers(void)
 {
-int count = 1;
-do {
-for (int j = 0; j <= 14; j++)
-_putchar(j + '0');
+char i;
+int counter;
 
-_putchar('\n');
-count++;
-} while (count <= 14);
+for (counter = 1; counter <= 10; counter++)
+{
+for (i = 0; i <= 14; i++)
+{
+_putchar(i + '0');
 }
+_putchar('\n');
+}
+}
+
