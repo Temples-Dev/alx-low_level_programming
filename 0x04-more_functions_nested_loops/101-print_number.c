@@ -8,31 +8,40 @@
 
 void print_number(int n)
 {
-unsigned int num = n;
-if (num == 0)
+int i;
+int d = 1;
+unsigned int x = n;
+unsigned int y = n;
+int c = 0;
+
+if (n == 0)
 {
 _putchar('0');
 }
-else
-{
-if (num < 0)
+if (n < 0)
 {
 _putchar('-');
-num = -num;
+n = n + 1;
+n = -n;
+y = n;
+x = n;
+x += 1;
+y += 1;
 }
 
-unsigned int divisor = 1;
-while (n / divisor >= 10)
+while (x != 0)
 {
-divisor *= 10;
+x = x / 10;
+c++;
 }
-
-while (divisor >= 1)
+for (i = 1; i < c; i++)
 {
-unsigned int digit = num / divisor;
-_putchar(digit + '0');
-num = num % divisor;
-divisor /= 10;
+d *= 10;
 }
+for (i = 0; i < c; i++)
+{
+_putchar(y / d + '0');
+y = y % d;
+d = d / 10;
 }
 }
