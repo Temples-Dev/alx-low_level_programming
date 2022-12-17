@@ -4,42 +4,24 @@
 /**
  * more_numbers - print 0 to 14 ten times
  *
- * @num: input from var i
- *
  * Return: void data type
  */
-void print_two_digits(char num);
 
 void more_numbers(void)
 {
-char i;
-int counter;
+int i;
+int h;
 
-for (counter = 1; counter <= 10; counter++)
+for (h = 0; h <= 9; h++)
 {
 for (i = 0; i <= 14; i++)
 {
-if (i < 10)
+if (i > 9)
 {
-putchar(i + '0');
+_putchar(i / 10 + '0');
 }
-else
-{
-print_two_digits(i);
-}
+_putchar(i % 10 + '0');
 }
 _putchar('\n');
 }
-}
-
-/**
- * print_two_digits - splits 10-14 and print
- *
- * @num: input from var i
- */
-
-void print_two_digits(char num)
-{
-putchar((num / 10) + '0');
-putchar((num % 10) + '0');
 }
