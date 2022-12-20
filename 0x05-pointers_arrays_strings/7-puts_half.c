@@ -20,7 +20,7 @@ length++;
 if (length % 2 != 0)
 i = (length - 1) / 2 + 1;
 else
-i = length / 2 + 1;
+i = length / 2;
 
 /* print the second half of the string, minus the first character */
 while (i < length)
