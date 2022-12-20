@@ -80,8 +80,8 @@ return (password);
 
 int main(void)
 {
+int i;
 srand(time(NULL)); /*seed the random number generator*/
-char i;
 for (i = '0'; i < NUM_PASSWORDS; i++)
 {
 printf("%s\n", generate_password());
