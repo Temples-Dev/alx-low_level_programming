@@ -50,7 +50,7 @@ return ((char)(rand() % 10 + '0'));
 char *generate_password(void)
 {
 static char password[PASSWORD_LENGTH + 1];
-int i;
+char i;
 for (i = 0; i < PASSWORD_LENGTH; i++)
 {
 switch (rand() % 4)
