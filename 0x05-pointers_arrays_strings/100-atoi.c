@@ -56,7 +56,7 @@ if (digit_index < 0)
 return (0);
 }
 
-unsigned int sign = find_sign(s);
+int sign = find_sign(s);
 unsigned int num = 0, i;
 for (i = digit_index; s[i] >= '0' && s[i] <= '9'; i++)
 {
