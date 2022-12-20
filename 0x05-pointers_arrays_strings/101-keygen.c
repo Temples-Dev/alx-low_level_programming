@@ -72,3 +72,19 @@ break;
 password[PASSWORD_LENGTH] = '\0';
 return (password);
 }
+
+/**
+ * main - entry point for pass generated
+ * Return: Always 0;
+ */
+
+int main(void)
+{
+srand(time(NULL)); /*seed the random number generator*/
+int i;
+for (i = 0; i < NUM_PASSWORDS; i++)
+{
+printf("%s\n", generate_password());
+}
+return (0);
+}
