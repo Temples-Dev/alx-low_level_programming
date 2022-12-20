@@ -52,7 +52,7 @@ int _atoi(char *s)
 {
 unsigned int sign = find_sign(s);
 unsigned int num = 0, i;
- 
+
 int digit_index = find_first_digit_index(s);
 if (digit_index < 0)
 {
@@ -64,5 +64,5 @@ for (i = digit_index; s[i] >= '0' && s[i] <= '9'; i++)
 {
 num = num * 10 + (s[i] - '0');
 }
-return (num * sign);
+return (num *sign);
 }
