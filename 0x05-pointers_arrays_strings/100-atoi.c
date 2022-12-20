@@ -50,14 +50,16 @@ return (num_negatives % 2 == 0 ? 1 : -1);
  */
 int _atoi(char *s)
 {
+unsigned int sign = find_sign(s);
+unsigned int num = 0, i;
+ 
 int digit_index = find_first_digit_index(s);
 if (digit_index < 0)
 {
 return (0);
 }
 
-int sign = find_sign(s);
-unsigned int num = 0, i;
+
 for (i = digit_index; s[i] >= '0' && s[i] <= '9'; i++)
 {
 num = num * 10 + (s[i] - '0');
