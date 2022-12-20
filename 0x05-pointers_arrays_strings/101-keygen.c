@@ -50,7 +50,7 @@ return ((char)(rand() % 10 + '0'));
 char *generate_password(void)
 {
 static char password[PASSWORD_LENGTH + 1];
-char i;
+int i;
 for (i = 0; i < PASSWORD_LENGTH; i++)
 {
 switch (rand() % 4)
@@ -81,8 +81,8 @@ return (password);
 int main(void)
 {
 srand(time(NULL)); /*seed the random number generator*/
-int i;
-for (i = 0; i < NUM_PASSWORDS; i++)
+char i;
+for (i = '0'; i < NUM_PASSWORDS; i++)
 {
 printf("%s\n", generate_password());
 }
