@@ -1,0 +1,1 @@
+More array, pointer and stings project
