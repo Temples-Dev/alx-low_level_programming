@@ -12,10 +12,10 @@ unsigned int _strspn(char *s, char *accept)
 int i = 0, j;
 int bytes = 0;
 
-while (s[i] != '\0') 
+while (s[i] != '\0')
 {
 
-for (j = 0; accept[j] != '\0'; j++) 
+for (j = 0; accept[j] != '\0'; j++)
 {
 
 if (s[i] == accept[j])
@@ -29,5 +29,5 @@ return (bytes);
 }
 i++;
 }
-return (bytes); 
+return (bytes);
 }
