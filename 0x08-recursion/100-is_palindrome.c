@@ -41,5 +41,5 @@ int is_palindrome(char *s)
 {
 int len = length(s);
 
-return (compreString(s, (s + len - 1)));
+return (compareString(s, (s + len - 1)));
 }
