@@ -4,14 +4,15 @@
  * rootcheck - finds the natural root
  * @n: square number
  * @num:number being checked
- * Returns: true for valid condition
+ * Return: true for valid condition
  */
 
 int rootcheck(int n, int num)
 {
 if (num * num == n)
 return (num);
-else /*if (num * num != n)*/
+
+if (num > n / num)
 return (-1);
 
 return (rootcheck(n, num + 1));
@@ -29,5 +30,13 @@ int _sqrt_recursion(int n)
 if (n < 0)
 return (-1);
 
-return (rootcheck(n, 0));
+if (n == 1)
+return (1);
+
+int start = 1;
+return (rootcheck(n, start));
 }
+
+
+
+
