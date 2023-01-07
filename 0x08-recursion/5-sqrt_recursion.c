@@ -27,13 +27,13 @@ return (rootcheck(n, num + 1));
 
 int _sqrt_recursion(int n)
 {
+int start = 1;
 if (n < 0)
 return (-1);
 
 if (n == 1)
 return (1);
 
-int start = 1;
 return (rootcheck(n, start));
 }
 
