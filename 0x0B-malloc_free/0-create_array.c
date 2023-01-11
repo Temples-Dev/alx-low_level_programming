@@ -24,7 +24,7 @@ return (NULL);
 while (i < (int)size)
 {
 *(array + index) = c;
-i++;
+index++;
 }
 *(array + index) = '\0';
 
