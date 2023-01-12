@@ -10,24 +10,24 @@
 
 char *create_array(unsigned int size, char c)
 {
-unsigned int i;
-char *arr;
+char *p;
+unsigned int i = 0;
 
-arr = (char *) malloc(size * sizeof(char));
-if (arr == NULL)
+if (size == 0)
 return (NULL);
 
-if (size != 0)
+p = (char *) malloc(sizeof(char) * size);
+
+if (p == NULL)
+return (0);
+
+while (i < size)
 {
-for (i = 0; i < size; i++)
-{
-*(arr + i) = c;
+*(p + i) = c;
+i++;
 }
 
-return (arr);
-}
-else
-{
-return (NULL);
-}
+*(p + i) = '\0';
+
+return (p);
 }
