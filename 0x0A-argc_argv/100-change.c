@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 int cents, totalCoins = 0;
 
-if (argc != 2)
+if (argc == 1 || argc > 2)
 {
 printf("Error\n");
 return (1);
