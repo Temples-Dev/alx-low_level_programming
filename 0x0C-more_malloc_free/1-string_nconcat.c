@@ -11,36 +11,37 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int length1, length2, index1, index2;
-char *result
+unsigned int index,
+first_string_length, second_string_length;
+char *concat_string;
 
-if (s1 == NULL)
-s1 = "";
 if (s2 == NULL)
 s2 = "";
+if (s1 == NULL)
+s1 = "";
 
-length1 = length2 = 0;
+first_string_length = 0;
+second_string_length = 0;
+while (s2[second_string_length] != '\0')
+second_string_length++;
+while (s1[first_string_length] != '\0')
+first_string_length++;
 
-while (s1[length1] != '\0')
-length1++;
-while (s2[length2] != '\0')
-length2++;
+if (n >= second_string_length)
+n = second_string_length;
 
-if (n >= length2)
-n = length2;
-
-result = (char *) malloc((length1 + n + 1) * sizeof(char));
-if (result == NULL)
+concat_string = malloc(sizeof(char) * n + first_string_length + 1);
+if (concat_string == NULL)
 return (NULL);
 
-for (index1 = 0; s1[index1] != '\0'; index1++)
-result[index1] = s1[index1];
+for (index = 0; index < first_string_length; index++)
+concat_string[index] = s1[index];
 
-for (index2 = 0; index2 < n && s2[index2] != '\0'; index2++)
-{
-result[index1] = s2[index2];
-index1++;
+for (index = 0; index < n; index++)
+concat_string[index + first_string_length] = s2[index];
+
+concat_string[index + first_string_length] = '\0';
+
+return (concat_string);
 }
-result[index1] = '\0';
-return (result);
-}
+
