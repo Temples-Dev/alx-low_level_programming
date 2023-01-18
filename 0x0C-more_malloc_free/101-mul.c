@@ -11,18 +11,18 @@
  * @n: number of bytes to be filled
  *
  * Return: pointer to the filled memory area
- */
+*/
 
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int i = 0;
+	unsigned int i = 0;
 
-while (i < n)
-{
-s[i] = b;
-i++;
-}
-return (s);
+	while (i < n)
+	{
+		s[i] = b;
+		i++;
+	}
+	return (s);
 }
 
 /**
@@ -33,20 +33,20 @@ return (s);
  * @size: size of each element
  *
  * Return: pointer to new allocated memory
- */
+*/
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *ptr;
+	char *ptr;
 
-if (nmemb == 0 || size == 0)
-return (NULL);
-ptr = malloc(nmemb * size);
-if (ptr == NULL)
-return (NULL);
-_memset(ptr, 0, nmemb * size);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	_memset(ptr, 0, nmemb * size);
 
-return (ptr);
+	return (ptr);
 }
 
 
@@ -57,50 +57,49 @@ return (ptr);
  * @s2: string 2
  *
  * Return: nothing
- */
+*/
 
 void multiply(char *s1, char *s2)
 {
-int i, length1, length2, total_length,
-first_digit, second_digit, carry = 0, tmp;
+	int i, l1, l2, total_l, f_digit, s_digit, res = 0, tmp;
+	char *ptr;
+	void *temp;
 
-char *result;
-void *temp;
+	l1 = _length(s1);
+	l2 = _length(s2);
+	tmp = l2;
+	total_l = l1 + l2;
+	ptr = _calloc(sizeof(int), total_l);
 
-length1 = _length(s1);
-length2 = _length(s2);
-tmp = length2;
-total_length = length1 + length2;
-result = _calloc(sizeof(int), total_length);
+	/* store our pointer address to free later */
+	temp = ptr;
 
-temp = result;
+	for (l1--; l1 >= 0; l1--)
+	{
+		f_digit = s1[l1] - '0';
+		res = 0;
+		l2 = tmp;
+		for (l2--; l2 >= 0; l2--)
+		{
+			s_digit = s2[l2] - '0';
+			res += ptr[l2 + l1 + 1] + (f_digit * s_digit);
+			ptr[l1 + l2 + 1] = res % 10;
+			res /= 10;
+		}
+		if (res)
+			ptr[l1 + l2 + 1] = res % 10;
+	}
 
-for (length1--; length1 >= 0; length1--)
-{
-first_digit = s1[length1] - '0';
-carry = 0;
-length2 = tmp;
-for (length2--; length2 >= 0; length2--)
-{
-second_digit = s2[length2] - '0';
-carry += result[length2 + length1 + 1] + (first_digit *second_digit);
-result[length1 + length2 + 1] = carry % 10;
-carry /= 10;
-}
-if (carry)
-result[length1 + length2 + 1] = carry % 10;
-}
+	while (*ptr == 0)
+	{
+		ptr++;
+		total_l--;
+	}
 
-while (*result == 0)
-{
-result++;
-total_length--;
-}
-
-for (i = 0; i < total_length; i++)
-printf("%i", result[i]);
-printf("\n");
-free(temp);
+	for (i = 0; i < total_l; i++)
+		printf("%i", ptr[i]);
+	printf("\n");
+	free(temp);
 }
 
 
@@ -114,22 +113,22 @@ free(temp);
  * @argv: arguments array
  *
  * Return: 0 on success 98 on faliure
- */
+*/
 
 int main(int argc, char *argv[])
 {
-char *n1 = argv[1];
-char *n2 = argv[2];
+	char *n1 = argv[1];
+	char *n2 = argv[2];
 
-if (argc != 3 || check_number(n1) || check_number(n2))
-error_exit();
+	if (argc != 3 || check_number(n1) || check_number(n2))
+		error_exit();
 
-if (*n1 == '0' || *n2 == '0')
-{
-_putchar('0');
-_putchar('\n');
-}
-else
-multiply(n1, n2);
-return (0);
+	if (*n1 == '0' || *n2 == '0')
+	{
+		_putchar('0');
+		_putchar('\n');
+	}
+	else
+		multiply(n1, n2);
+	return (0);
 }
